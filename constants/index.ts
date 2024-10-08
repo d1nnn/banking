@@ -1,22 +1,47 @@
+import { CiCreditCard1 } from "react-icons/ci";
+import { FiHome } from "react-icons/fi";
+import { LiaBalanceScaleRightSolid, LiaWalletSolid } from "react-icons/lia";
+import { LuCircleDollarSign } from "react-icons/lu";
+import { PiNoteDuotone } from "react-icons/pi";
+
 export const sidebarLinks = [
   {
-    imgURL: "/icons/home.svg",
+    icon: FiHome,
     route: "/",
-    label: "Home",
+    label: "Dashboard",
   },
   {
-    imgURL: "/icons/dollar-circle.svg",
-    route: "/my-banks",
-    label: "My Banks",
+    icon: LuCircleDollarSign,
+    route: "/requests",
+    label: "Requests",
+    children: [
+      {
+        route: "/pending",
+        label: "Pending",
+      },
+      {
+        route: "/my-requests",
+        label: "My requests",
+      },
+      {
+        route: "/all-requests",
+        label: "All requests",
+      },
+    ],
   },
   {
-    imgURL: "/icons/transaction.svg",
+    icon: LiaWalletSolid,
+    route: "/balance",
+    label: "Balance",
+  },
+  {
+    icon: PiNoteDuotone,
     route: "/transaction",
     label: "Transaction",
   },
   {
-    imgURL: "/icons/money-send.svg",
-    route: "/payment-transfer",
-    label: "Transfer Funds",
+    icon: CiCreditCard1,
+    route: "/cardnbudget",
+    label: "Card & Budget",
   },
 ];

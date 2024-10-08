@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+.subitems :not(:nth-child(1)) {
+  margin-top: 1rem;
+}
+
+.subitems {
+  /* max-height: 0; */
+  transition-property: max-height, transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -9,5 +20,9 @@
 
   .sidebar {
     @apply sticky left-0 top-0 flex h-screen flex-col  justify-between border-r border-gray-200 bg-white pt-8 text-white max-md:hidden sm:p-4 xl:p-6;
+  }
+
+  body {
+    @apply bg-zinc-100;
   }
 }

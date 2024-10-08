@@ -6,7 +6,7 @@ import { SlBell } from "react-icons/sl";
 
 const Navbar = () => {
   return (
-    <div className="flex p-3 bg-zinc-100 justify-between">
+    <div className="flex p-3 bg-zinc-50 justify-between">
       <div className="relative flex items-center bg-zinc-200 rounded-md">
         <div className="flex-[1] flex justify-center items-center w-[40px] h-[40px] p-3">
           <FaMagnifyingGlass className="text-neutral-500" />
